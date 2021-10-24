@@ -134,7 +134,7 @@ function awards.show_to(name, to, sid, text)
 	else
 		local deco = ""
 		if minetest.global_exists("default") then
-			deco = default.gui_bg .. default.gui_bg_img
+			deco = "" .. ""
 		end
 		-- Show formspec to user
 		minetest.show_formspec(to,"awards:awards",

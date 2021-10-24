@@ -145,7 +145,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.01,
 		trigger = {
 			type = "place",
-			node = "default:torch",
+			node = "torch:torch",
 			target = 100
 		}
 	})
@@ -158,7 +158,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.01,
 		trigger = {
 			type = "place",
-			node = "default:torch",
+			node = "torch:torch",
 			target = 1000
 		}
 	})
@@ -170,7 +170,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.2,
 		trigger = {
 			type = "craft",
-			item = "default:meselamp",
+			item = "mese:lamp",
 			target = 10
 		}
 	})
@@ -182,7 +182,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.08,
 		trigger = {
 			type = "craft",
-			item = "default:stonebrick",
+			item = "stone:stonebrick",
 			target = 200
 		}
 	})
@@ -194,7 +194,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.08,
 		trigger = {
 			type = "craft",
-			item = "default:stonebrick",
+			item = "stone:stonebrick",
 			target = 800
 		}
 	})
@@ -206,7 +206,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.08,
 		trigger = {
 			type = "craft",
-			item = "default:stonebrick",
+			item = "stone:stonebrick",
 			target = 3200
 		}
 	})
@@ -218,7 +218,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.09,
 		trigger = {
 			type = "craft",
-			item = "default:desert_stonebrick",
+			item = "sand:desert_stone_brick",
 			target = 400
 		}
 	})
@@ -230,7 +230,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.09,
 		trigger = {
 			type = "craft",
-			item = "default:sandstonebrick",
+			item = "sand:sandstonebrick",
 			target = 100
 		}
 	})
@@ -242,7 +242,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.2,
 		trigger = {
 			type = "craft",
-			item = "default:bookshelf",
+			item = "paper:bookshelf",
 			target = 7
 		}
 	})
@@ -255,7 +255,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1.5,
 		trigger = {
 			type = "dig",
-			node = "default:obsidian",
+			node = "glass:obsidian",
 			target = 1
 		}
 	})
@@ -269,7 +269,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1.5,
 		trigger = {
 			type = "dig",
-			node = "default:obsidian",
+			node = "glass:obsidian",
 			target = 50
 		}
 	})
@@ -284,8 +284,8 @@ if minetest.get_modpath("default") then
 	})
 	awards.register_on_dig(function(player,data)
 		local pos = player:get_pos()
-		if pos and (minetest.find_node_near(pos, 1, "default:lava_source") or
-				minetest.find_node_near(pos, 1, "default:lava_flowing")) then
+		if pos and (minetest.find_node_near(pos, 1, "lava:source") or
+				minetest.find_node_near(pos, 1, "lava:flowing")) then
 			return "award_lavaminer"
 		end
 		return nil
@@ -311,7 +311,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
-			node = "default:tree",
+			node = "apple:tree",
 			target = 6
 		}
 	})
@@ -324,7 +324,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
-			node = "default:tree",
+			node = "apple:tree",
 			target = 36
 		}
 	})
@@ -337,7 +337,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
-			node = "default:tree",
+			node = "apple:tree",
 			target = 216
 		}
 	})
@@ -350,7 +350,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
-			node = "default:tree",
+			node = "apple:tree",
 			target = 1296
 		}
 	})
@@ -363,7 +363,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.05,
 		trigger = {
 			type = "dig",
-			node = "default:jungletree",
+			node = "jungle:tree",
 			target = 100
 		}
 	})
@@ -376,7 +376,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.05,
 		trigger = {
 			type = "dig",
-			node = "default:jungletree",
+			node = "jungle:tree",
 			target = 1000
 		}
 	})
@@ -390,7 +390,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1,
 		trigger = {
 			type = "dig",
-			node = "default:stone_with_mese",
+			node = "stone:stone_with_mese",
 			target = 1
 		}
 	})
@@ -405,7 +405,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1.1,
 		trigger = {
 			type = "dig",
-			node = "default:mese",
+			node = "mese:ore",
 			target = 1
 		}
 	})
@@ -419,7 +419,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.2,
 		trigger = {
 			type = "dig",
-			node = "default:stone_with_copper",
+			node = "stone:stone_with_copper",
 			target = 1000
 		}
 	})
@@ -433,7 +433,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.02,
 		trigger = {
 			type = "dig",
-			node = "default:stone",
+			node = "stone:stone",
 			target = 100
 		}
 	})
@@ -447,7 +447,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.02,
 		trigger = {
 			type = "dig",
-			node = "default:stone",
+			node = "stone:stone",
 			target = 1000
 		}
 	})
@@ -461,7 +461,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.02,
 		trigger = {
 			type = "dig",
-			node = "default:stone",
+			node = "stone:stone",
 			target = 10000
 		}
 	})
@@ -475,7 +475,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.05,
 		trigger = {
 			type = "dig",
-			node = "default:sand",
+			node = "sand:sand",
 			target = 1000
 		}
 	})
@@ -487,7 +487,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.01,
 		trigger = {
 			type = "craft",
-			item = "default:stick",
+			item = "wood:stick",
 			target = 100
 		}
 	})
@@ -499,7 +499,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.009,
 		trigger = {
 			type = "dig",
-			node = "default:junglegrass",
+			node = "grass:jungle",
 			target = 1
 		}
 	})
@@ -511,7 +511,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.009,
 		trigger = {
 			type = "dig",
-			node = "default:grass_1",
+			node = "grass:grass_1",
 			target = 1
 		}
 	})
@@ -523,7 +523,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.009,
 		trigger = {
 			type = "dig",
-			node = "default:dry_grass_3",
+			node = "grass:dry_3",
 			target = 1
 		}
 	})
@@ -535,7 +535,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.03,
 		trigger = {
 			type = "dig",
-			node = "default:cactus",
+			node = "cactus:cactus",
 			target = 1
 		}
 	})
@@ -559,7 +559,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.02,
 		trigger = {
 			type = "dig",
-			node = "default:ice",
+			node = "snow:ice",
 			target = 1
 		}
 	})
@@ -572,7 +572,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.02,
 		trigger = {
 			type = "place",
-			node = "default:snowblock",
+			node = "snow:block",
 			target = 2
 		}
 	})
@@ -585,7 +585,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.9,
 		trigger = {
 			type = "dig",
-			node = "default:stone_with_gold",
+			node = "stone:stone_with_gold",
 			target = 1
 		}
 	})
@@ -598,7 +598,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.9,
 		trigger = {
 			type = "dig",
-			node = "default:stone_with_gold",
+			node = "stone:stone_with_gold",
 			target = 45
 		}
 	})
@@ -610,7 +610,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1,
 		trigger = {
 			type = "dig",
-			node = "default:stone_with_diamond",
+			node = "stone:stone_with_diamond",
 			target = 1
 		}
 	})
@@ -623,7 +623,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1,
 		trigger = {
 			type = "dig",
-			node = "default:stone_with_diamond",
+			node = "stone:stone_with_diamond",
 			target = 18
 		}
 	})
@@ -635,7 +635,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1.1,
 		trigger = {
 			type = "craft",
-			item = "default:diamondblock",
+			item = "diamond:block",
 			target = 1
 		}
 	})
@@ -647,7 +647,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.9,
 		trigger = {
 			type = "dig",
-			node = "default:mossycobble",
+			node = "stone:mossycobble",
 			target = 1
 		}
 	})
@@ -659,7 +659,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.08,
 		trigger = {
 			type = "craft",
-			item= "default:furnace",
+			item= "furnace:furnace",
 			target = 10
 		}
 	})
@@ -671,7 +671,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.08,
 		trigger = {
 			type = "craft",
-			item= "default:chest",
+			item= "chest:chest",
 			target = 15
 		}
 	})
@@ -683,7 +683,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.08,
 		trigger = {
 			type = "craft",
-			item= "default:chest_locked",
+			item= "chest:chest",
 			target = 30
 		}
 	})
@@ -707,7 +707,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.4,
 		trigger = {
 			type = "craft",
-			item= "default:obsidianbrick",
+			item= "glass:obsidian_brick",
 			target = 100
 		}
 	})
@@ -719,7 +719,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.1,
 		trigger = {
 			type = "place",
-			node = "default:stone",
+			node = "stone:stone",
 			target = 100
 		}
 	})
@@ -731,7 +731,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.1,
 		trigger = {
 			type = "place",
-			node = "default:ladder_wood",
+			node = "wood:ladder",
 			target = 400
 		}
 	})
@@ -743,7 +743,7 @@ if minetest.get_modpath("default") then
 		difficulty = 1,
 		trigger = {
 			type = "place",
-			node = "default:ladder_steel",
+			node = "iron:ladder",
 			target = 40
 		}
 	})
@@ -755,7 +755,7 @@ if minetest.get_modpath("default") then
 		difficulty = 0.1,
 		trigger = {
 			type = "eat",
-			item = "default:apple",
+			item = "apple:apple",
 			target = 80
 		}
 	})
@@ -768,8 +768,8 @@ if minetest.get_modpath("default") then
 	})
 	awards.register_on_death(function(player,data)
 		local pos = player:get_pos()
-		if pos and (minetest.find_node_near(pos, 2, "default:lava_flowing") ~= nil or
-				minetest.find_node_near(pos, 2, "default:lava_source") ~= nil) then
+		if pos and (minetest.find_node_near(pos, 2, "lava:flowing") ~= nil or
+				minetest.find_node_near(pos, 2, "lava:source") ~= nil) then
 			return "award_in_the_flow"
 		end
 		return nil
@@ -783,7 +783,7 @@ if minetest.get_modpath("default") then
 	})
 	awards.register_on_death(function(player,data)
 		local pos = player:get_pos()
-		if pos and minetest.find_node_near(pos, 5, "default:stone_with_diamond") ~= nil then
+		if pos and minetest.find_node_near(pos, 5, "stone:stone_with_diamond") ~= nil then
 			return "award_this_is_sad"
 		end
 		return nil
@@ -813,7 +813,7 @@ if minetest.get_modpath("vessels") then
 		description = S("Craft 14 vessels shelves."),
 		trigger = {
 			type = "craft",
-			item= "vessels:shelf",
+			item= "vessel:shelf",
 			target = 14
 		}
 	})
@@ -826,7 +826,7 @@ if minetest.get_modpath("farming") then
 		icon = "awards_farming_skills_acquired.png^awards_level1.png",
 		trigger = {
 			type = "dig",
-			node = "farming:wheat_8",
+			node = "farm:wheat_8",
 			target = 1
 		}
 	})
@@ -836,7 +836,7 @@ if minetest.get_modpath("farming") then
 		icon = "awards_field_worker.png^awards_level2.png",
 		trigger = {
 			type = "dig",
-			node = "farming:wheat_8",
+			node = "farm:wheat_8",
 			target = 25
 		}
 	})
@@ -847,7 +847,7 @@ if minetest.get_modpath("farming") then
 		icon = "awards_aspiring_farmer.png^awards_level3.png",
 		trigger = {
 			type = "dig",
-			node = "farming:wheat_8",
+			node = "farm:wheat_8",
 			target = 125
 		}
 	})
@@ -858,7 +858,7 @@ if minetest.get_modpath("farming") then
 		icon = "awards_wheat_magnate.png^awards_level4.png",
 		trigger = {
 			type = "dig",
-			node = "farming:wheat_8",
+			node = "farm:wheat_8",
 			target = 625
 		}
 	})
@@ -968,7 +968,7 @@ if minetest.get_modpath("flowers") then
 		icon = "awards_tasty_mushrooms.png^awards_level1.png",
 		trigger = {
 			type = "eat",
-			item= "flowers:mushroom_brown",
+			item= "mushroom:brown",
 			target = 3,
 		}
 	})
@@ -978,7 +978,7 @@ if minetest.get_modpath("flowers") then
 		icon = "awards_mushroom_lover.png^awards_level2.png",
 		trigger = {
 			type = "eat",
-			item= "flowers:mushroom_brown",
+			item= "mushroom:brown",
 			target = 33,
 		}
 	})
@@ -988,7 +988,7 @@ if minetest.get_modpath("flowers") then
 		icon = "awards_underground_mushroom_farmer.png^awards_level3.png",
 		trigger = {
 			type = "eat",
-			item= "flowers:mushroom_brown",
+			item= "mushroom:brown",
 			target = 333,
 		}
 	})

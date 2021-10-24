@@ -29,7 +29,7 @@ awards.register_award("mymod:award", {
 	description = "My Example Award",
 	trigger = {
 		type   = "dig",
-		node   = "default:stone",
+		node   = "stone:stone",
 		target = 10,
 	},
 })
@@ -64,8 +64,8 @@ awards.register_award("mymod:award", {
 
 awards.register_on_dig(function(player, data)
 	local pos = player:get_pos()
-	if pos and (minetest.find_node_near(pos, 1, "default:lava_source") or
-			minetest.find_node_near(pos, 1, "default:lava_flowing")) then
+	if pos and (minetest.find_node_near(pos, 1, "lava:source") or
+			minetest.find_node_near(pos, 1, "lava:flowing")) then
 		return "mymod:award"
 	end
 	return nil
@@ -264,7 +264,7 @@ Each type has a register function like so:
 ```lua
 trigger = {
 	type   = "dig",
-	node   = "default:dirt", -- item, alias, or group
+	node   = "dirt:dirt", -- item, alias, or group
 	target = 50,
 }
 ```
@@ -274,7 +274,7 @@ trigger = {
 ```lua
 trigger = {
 	type   = "place",
-	node   = "default:dirt", -- item, alias, or group
+	node   = "dirt:dirt", -- item, alias, or group
 	target = 50,
 }
 ```
@@ -284,7 +284,7 @@ trigger = {
 ```lua
 trigger = {
 	type   = "craft",
-	item   = "default:dirt", -- item, alias, or group
+	item   = "dirt:dirt", -- item, alias, or group
 	target = 50,
 }
 ```
@@ -322,7 +322,7 @@ trigger = {
 ```lua
 trigger = {
 	type   = "eat",
-	item   = "default:apple",
+	item   = "apple:apple",
 	target = 100,
 }
 ```
