@@ -921,7 +921,7 @@ if minetest.get_modpath("farming") then
 		icon = "awards_baker.png",
 		trigger = {
 			type = "eat",
-			item = "farming:bread",
+			item = "farm:bread",
 			target = 10
 		}
 	})
